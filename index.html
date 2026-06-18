@@ -100,22 +100,42 @@ body{
     }
 }
 
-/* Moving Text */
+/* Text Container - keeps text vertically centered */
 .text-track{
     position:absolute;
-    width:max-content;
-    white-space:nowrap;
     top:50%;
+    left:0;
+    width:100%;
     transform:translateY(-50%);
+    overflow:hidden;
+}
+
+/* Moving Text */
+.welcome{
+    display:inline-block;
+    font-size:70px;
+    font-weight:900;
+    font-family:Georgia, serif;
+    letter-spacing:3px;
+    white-space:nowrap;
+
+    color:#111;
+
+    text-shadow:
+        1px 1px 0 rgba(255,255,255,.15),
+        -1px -1px 0 rgba(0,0,0,.5),
+        2px 2px 3px rgba(255,255,255,.15),
+        -2px -2px 3px rgba(0,0,0,.6);
+
     animation:moveTrain 25s linear infinite;
 }
 
 @keyframes moveTrain{
     from{
-        transform:translate(100vw,-50%);
+        transform:translateX(100vw);
     }
     to{
-        transform:translate(-120%,-50%);
+        transform:translateX(-120%);
     }
 }
 
