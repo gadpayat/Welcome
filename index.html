@@ -46,7 +46,11 @@ body{
 .gold-strip{
     position:relative;
     width:100%;
-    height:180px;
+    height:150px;
+
+    display:flex;
+    align-items:center;      /* Vertical center */
+    overflow:hidden;
 
     background:
     linear-gradient(
@@ -63,13 +67,6 @@ body{
         #b8860b 90%,
         #5c4300 100%
     );
-
-    box-shadow:
-        inset 0 8px 15px rgba(255,255,255,.6),
-        inset 0 -8px 15px rgba(0,0,0,.5),
-        0 0 40px rgba(255,215,0,.7);
-
-    overflow:hidden;
 }
 
 /* Glitter Shine */
@@ -103,11 +100,8 @@ body{
 /* Text Container - keeps text vertically centered */
 .text-track{
     position:absolute;
-    top:50%;
-    left:0;
-    width:100%;
-    transform:translateY(-50%);
-    overflow:hidden;
+    white-space:nowrap;
+    animation:moveTrain 25s linear infinite;
 }
 
 /* Moving Text */
