@@ -131,10 +131,13 @@ body{
 }
 
 @keyframes moveTrain{
-    from{
+    0%{
         transform:translateX(100vw);
     }
-    to{
+    50%{
+        transform:translateX(calc(50vw - 50%));
+    }
+    100%{
         transform:translateX(-120%);
     }
 }
